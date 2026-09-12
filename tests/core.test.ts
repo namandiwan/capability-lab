@@ -8,6 +8,7 @@ import { Inputs, Capability } from '../src/schema.js';
 import { fixture } from '../src/fixture.js';
 import { Control } from '../src/handoff.js';
 import { Audit } from '../src/audit.js';
+import { listCapabilities, resolveCapability } from '../src/catalog.js';
 
 test('policy rejects origin confusion, route escapes, credentials and arbitrary actions', () => {
   const p = new Policy('http://127.0.0.1:4173/');
@@ -42,4 +43,11 @@ test('persisted successful results redact financial output', async () => {
     outputs: { balance: '$123,456.78', reviewStatus: 'Ready for approval', reviewProduct: 'Savings' } });
   const data = await readFile(join(dir, 'result.json'), 'utf8');
   assert.ok(!data.includes('123,456')); assert.ok(data.includes('[REDACTED]'));
+});
+test('capability catalog resolves one reviewed artifact by function name', async () => {
+  const entries = await listCapabilities();
+  assert.deepEqual(entries.map(entry => entry.name), ['prepare-subaccount-review']);
+  assert.equal(await resolveCapability('prepare-subaccount-review'),
+    'evidence/discovery-1789097619829/capability.json');
+  await assert.rejects(resolveCapability('unknown-capability'), /unknown_capability/);
 });

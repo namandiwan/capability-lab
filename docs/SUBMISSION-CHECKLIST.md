@@ -13,7 +13,7 @@ Review basis: the complete assignment, current source, evidence and the exact re
 | 3.5 Observability | Implemented with limits | Structured discovery/replay logs and semantic failure snapshots. Raw screenshots/DOM are intentionally excluded for privacy. |
 | 3.6 Live human handoff | Mechanism verified | Same browser, ownership epochs, captured operator action and checked resume; evidence operator is simulated and labeled. |
 | 3.7 Heterogeneity and tenants | Documented | Surface seam is implemented; desktop and tenant adapters are design only, as allowed. |
-| Stretch: capability interface | Partial, accurately labeled | Function-style catalog with JSON Schema plus replay CLI; no name-based registry service. |
+| Stretch: capability interface | Verified | Function-style catalog with JSON Schema and registry-backed invocation by capability name. |
 | Stretch: multi-run stability | Verified | Five of five local Chromium replays; not presented as a production SLA. |
 | README.md and REPORT.md | Complete | Reviewer paths plus all seven required report headings. |
 | Public repository | Verified | Public at `https://github.com/namandiwan/capability-lab`; the latest GitHub Actions run passes. |

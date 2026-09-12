@@ -1,0 +1,8 @@
+{
+  "capabilities": [
+    {
+      "name": "prepare-subaccount-review",
+      "artifact": "evidence/discovery-1789097619829/capability.json"
+    }
+  ]
+}

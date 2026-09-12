@@ -6,6 +6,8 @@
 
 `offline/capability.json` is a **hand-authored test fixture** (`provenance.kind: test-fixture`, model `none`). Its flows ran against the actual local browser UI. `offline/summary.json` records normal/changed-input success, known business outcomes, bounded recovery, simulated operator handoff, an expected application-error stop, and five successful repeat replays. Replay model calls are zero.
 
+`named-invocation/` records the reviewed discovery artifact being resolved from `capabilities/registry.json` and invoked as `prepare-subaccount-review`. The successful run reports zero model calls; stored outputs are redacted.
+
 The existing offline directories contain two generations of events from repeated executions. Events have distinct run IDs; `result.json` describes the latest run. Some older failure snapshots remain beside newer success results. These are historical development evidence, not a clean final submission bundle. Do not infer a latest-run failure from an unmatched old snapshot.
 
 Use a fresh output directory for every run. Do not relabel a fixture as genuine discovery or delete failed attempts to claim unbroken success.

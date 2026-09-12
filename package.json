@@ -11,6 +11,7 @@
     "sandbox": "tsx src/sandbox.ts",
     "discover": "tsx src/cli.ts discover",
     "replay": "tsx src/cli.ts replay",
+    "invoke": "tsx src/cli.ts invoke",
     "catalog": "tsx src/cli.ts catalog",
     "demo": "tsx src/demo.ts",
     "review": "tsx src/review.ts",

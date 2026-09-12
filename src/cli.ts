@@ -8,6 +8,7 @@ import { Runtime } from './runtime.js';
 import { Policy } from './profile.js';
 import { terminalOperator } from './handoff.js';
 import { Inputs, Outputs, Capability } from './schema.js';
+import { listCapabilities, resolveCapability } from './catalog.js';
 
 async function main() {
   const { values, positionals } = parseArgs({ allowPositionals: true, options: {
@@ -16,16 +17,25 @@ async function main() {
     member: { type: 'string', default: '10001' }, nickname: { type: 'string', default: 'Rainy day' },
     out: { type: 'string' }, scenario: { type: 'string', default: 'normal' },
     headed: { type: 'boolean', default: false }, operator: { type: 'boolean', default: false },
+    name: { type: 'string' }, registry: { type: 'string', default: 'capabilities/registry.json' },
   } });
   const command = positionals[0];
   if (command === 'catalog') {
-    const capability = Capability.parse(JSON.parse(await readFile(values.artifact!, 'utf8')));
-    console.log(JSON.stringify({ type: 'function', name: capability.name, description: capability.description,
-      parameters: z.toJSONSchema(Inputs), returns: z.toJSONSchema(Outputs), artifact: values.artifact,
-      invocation: 'npm run replay -- --artifact <path> --member <memberId> --nickname <nickname>' }, null, 2));
+    const entries = await listCapabilities(values.registry!);
+    const catalog = await Promise.all(entries.map(async (entry) => {
+      const capability = Capability.parse(JSON.parse(await readFile(entry.artifact, 'utf8')));
+      return { type: 'function', name: capability.name, description: capability.description,
+        parameters: z.toJSONSchema(Inputs), returns: z.toJSONSchema(Outputs),
+        invocation: `npm run invoke -- --name ${capability.name} --member <memberId> --nickname <nickname>` };
+    }));
+    console.log(JSON.stringify(catalog, null, 2));
     return;
   }
-  if (!['discover', 'replay'].includes(command ?? '')) throw new Error('usage');
+  if (!['discover', 'replay', 'invoke'].includes(command ?? '')) throw new Error('usage');
+  if (command === 'invoke') {
+    if (!values.name) throw new Error('name_required');
+    values.artifact = await resolveCapability(values.name, values.registry!);
+  }
   if (values.operator && !values.headed) throw new Error('operator_requires_headed');
   const directory = values.out ?? join('runs', `${command}-${Date.now()}`);
   const audit = new Audit(directory);
@@ -49,7 +59,7 @@ async function main() {
       if (run.result.status === 'failure') process.exitCode = 1;
     } else {
       const raw = JSON.parse(await readFile(values.artifact!, 'utf8'));
-      const result = await runtime.replay(raw, inputs);
+      const result = await runtime.replay(raw, Inputs.parse(inputs));
       console.log(JSON.stringify(result, null, 2));
       if (result.status === 'failure') process.exitCode = 1;
     }

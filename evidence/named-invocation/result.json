@@ -1,0 +1,10 @@
+{
+  "runId": "5ead5a6f-f2cf-43af-841f-99583e910705",
+  "status": "success",
+  "outputs": {
+    "balance": "[REDACTED]",
+    "reviewStatus": "[REDACTED]",
+    "reviewProduct": "[REDACTED]"
+  },
+  "modelCalls": 0
+}

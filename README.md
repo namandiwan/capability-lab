@@ -131,13 +131,23 @@ For an offline rehearsal, replace the artifact path with `evidence/offline/capab
 
 A result is `success` with typed outputs, `business_outcome` with a known code, or `failure` with step, expected/observed state and code. Raw browser/model error messages are suppressed; diagnostics intentionally trade detail for data minimization.
 
-The catalog command exports one function-style description and JSON Schema arguments/results:
+The registry exposes saved artifacts as function-style capabilities with JSON Schema arguments/results:
 
 ```bash
-npm run catalog -- --artifact evidence/offline/capability.json
+npm run catalog
 ```
 
-This is a catalog descriptor plus an artifact-path replay CLI. A registry that dispatches capabilities by name is not implemented.
+An agent or reviewer can invoke the discovered capability by name with typed arguments:
+
+```bash
+npm run invoke -- \
+  --name prepare-subaccount-review \
+  --member 10002 \
+  --nickname "Emergency savings" \
+  --out runs/named-invocation
+```
+
+The registry resolves the reviewed artifact, validates arguments and dispatches the same model-free replay runtime.
 
 ## Evidence and limitations
 
