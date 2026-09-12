@@ -16,15 +16,14 @@ Review basis: the complete assignment, current source, evidence and the exact re
 | Stretch: capability interface | Partial, accurately labeled | Function-style catalog with JSON Schema plus replay CLI; no name-based registry service. |
 | Stretch: multi-run stability | Verified | Five of five local Chromium replays; not presented as a production SLA. |
 | README.md and REPORT.md | Complete | Reviewer paths plus all seven required report headings. |
-| Public repository | Pending | Publish after final applicant review. |
-| Submission email | Drafted, not sent | Add verified public URL and use the application email address. |
+| Public repository | Verified | Public at `https://github.com/namandiwan/capability-lab`; the latest GitHub Actions run passes. |
+| Submission email | Drafted, not sent | Send the prepared draft from the application email address after your final walkthrough. |
 
 ## Finish before sending
 
 1. Rehearse headed manual handoff once as the applicant; the automated same-session test already passes.
-2. Run `npm run review` from a fresh clone or Codespace.
-3. Initialize and push this project root to a public repository; verify unauthenticated access.
-4. Insert the repository URL in the email draft and send it from the application address. Do not send a ZIP.
+2. Optionally repeat `npm run review` in Codespaces as a final reviewer-view check; GitHub Actions already passes from a clean checkout.
+3. Send the prepared email from the application address. Do not send a ZIP.
 
 ## Known limits worth defending
 
