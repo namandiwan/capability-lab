@@ -1,0 +1,9 @@
+{
+  "runId": "d2afdf32-4887-4184-b273-7bb9eba57ff3",
+  "status": "failure",
+  "code": "execution_error",
+  "step": 0,
+  "expected": "search",
+  "observed": "search",
+  "modelCalls": 1
+}

@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "name": "prepare-subaccount-review",
+  "version": "1.0.0",
+  "description": "Look up a member, read savings balance, and prepare a sub-account review without committing.",
+  "application": {
+    "family": "ledgerdesk",
+    "bindingVersion": "1.0"
+  },
+  "inputContract": "member-review-inputs/v1",
+  "outputContract": "member-review-outputs/v1",
+  "steps": [
+    {
+      "action": {
+        "kind": "fill",
+        "target": "memberId",
+        "input": "memberId"
+      },
+      "before": "search",
+      "after": "search"
+    },
+    {
+      "action": {
+        "kind": "click",
+        "target": "search"
+      },
+      "before": "search",
+      "after": "results"
+    },
+    {
+      "action": {
+        "kind": "click",
+        "target": "openMember"
+      },
+      "before": "results",
+      "after": "detail"
+    },
+    {
+      "action": {
+        "kind": "click",
+        "target": "prepareAccount"
+      },
+      "before": "detail",
+      "after": "form"
+    },
+    {
+      "action": {
+        "kind": "select",
+        "target": "product",
+        "value": "Savings"
+      },
+      "before": "form",
+      "after": "form"
+    },
+    {
+      "action": {
+        "kind": "fill",
+        "target": "nickname",
+        "input": "nickname"
+      },
+      "before": "form",
+      "after": "form"
+    },
+    {
+      "action": {
+        "kind": "click",
+        "target": "review"
+      },
+      "before": "form",
+      "after": "review"
+    }
+  ],
+  "outputs": [
+    "balance",
+    "reviewStatus",
+    "reviewProduct"
+  ],
+  "checkpoint": "review",
+  "provenance": {
+    "kind": "test-fixture",
+    "runId": "84f8eb36-fa64-4ab3-a4f2-f336b69fea66",
+    "model": "none",
+    "createdAt": "2026-09-11T02:59:23.631Z"
+  }
+}

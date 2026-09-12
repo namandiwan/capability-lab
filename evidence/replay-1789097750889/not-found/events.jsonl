@@ -1,0 +1,5 @@
+{"time":"2026-09-11T03:36:01.015Z","runId":"f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0","sequence":1,"event":"run_started","code":"replay"}
+{"time":"2026-09-11T03:36:01.207Z","runId":"f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0","sequence":2,"event":"action","step":0,"target":"memberId","kind":"fill","reason":"recorded_step"}
+{"time":"2026-09-11T03:36:01.314Z","runId":"f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0","sequence":3,"event":"checkpoint","step":0,"state":"search"}
+{"time":"2026-09-11T03:36:01.377Z","runId":"f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0","sequence":4,"event":"action","step":1,"target":"search","kind":"click","reason":"recorded_step"}
+{"time":"2026-09-11T03:36:01.769Z","runId":"f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0","sequence":5,"event":"run_completed","code":"not_found","step":1,"modelCalls":0,"elapsedMs":754}

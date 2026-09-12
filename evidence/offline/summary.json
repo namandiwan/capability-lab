@@ -1,0 +1,61 @@
+{
+  "artifactSource": "hand-authored test fixture",
+  "operator": "simulated integration-test operator; same browser session",
+  "runs": [
+    {
+      "name": "normal",
+      "status": "success",
+      "modelCalls": 0
+    },
+    {
+      "name": "other-input",
+      "status": "success",
+      "modelCalls": 0
+    },
+    {
+      "name": "not-found",
+      "status": "business_outcome",
+      "code": "not_found",
+      "modelCalls": 0
+    },
+    {
+      "name": "validation",
+      "status": "business_outcome",
+      "code": "validation",
+      "modelCalls": 0
+    },
+    {
+      "name": "permission-denied",
+      "status": "business_outcome",
+      "code": "permission_denied",
+      "modelCalls": 0
+    },
+    {
+      "name": "slow-load",
+      "status": "success",
+      "modelCalls": 0
+    },
+    {
+      "name": "known-notice",
+      "status": "success",
+      "modelCalls": 0
+    },
+    {
+      "name": "handoff",
+      "status": "success",
+      "modelCalls": 0
+    },
+    {
+      "name": "app-error",
+      "status": "failure",
+      "code": "operator_required",
+      "modelCalls": 0
+    }
+  ],
+  "stability": {
+    "passed": 5,
+    "total": 5,
+    "rate": 1,
+    "scope": "local Chromium, same sandbox version; not a production reliability estimate"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "runId": "cfd54c02-17be-4272-b165-5482d98d1a59",
+  "step": 0,
+  "state": "search",
+  "accessibleControls": [
+    {
+      "target": "memberId",
+      "visible": true
+    },
+    {
+      "target": "search",
+      "visible": true
+    }
+  ],
+  "redaction": "Allowlisted semantic projection; no page text, field values, URLs or pixels stored."
+}

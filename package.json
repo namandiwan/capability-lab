@@ -1,0 +1,22 @@
+{
+  "name": "capability-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discover once. Replay with a contract. A computer-use capability runtime.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "sandbox": "tsx src/sandbox.ts",
+    "discover": "tsx src/cli.ts discover",
+    "replay": "tsx src/cli.ts replay",
+    "catalog": "tsx src/cli.ts catalog",
+    "demo": "tsx src/demo.ts",
+    "review": "tsx src/review.ts",
+    "discover:local": "MODEL_PROVIDER=ollama tsx src/live-demo.ts",
+    "verify:discovered": "tsx src/verify-discovery.ts"
+  },
+  "dependencies": { "playwright": "1.58.2", "zod": "4.3.6" },
+  "devDependencies": { "@types/node": "22.19.11", "tsx": "4.21.0", "typescript": "5.9.3" }
+}

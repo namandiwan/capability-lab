@@ -1,0 +1,12 @@
+{
+  "runId": "d051fed9-191a-44ca-b51e-47d07715bd13",
+  "step": 1,
+  "state": "unknown",
+  "accessibleControls": [
+    {
+      "target": "openMember",
+      "visible": true
+    }
+  ],
+  "redaction": "Allowlisted semantic projection; no page text, field values, URLs or pixels stored."
+}

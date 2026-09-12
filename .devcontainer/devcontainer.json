@@ -1,0 +1,10 @@
+{
+  "name": "Capability Lab Reviewer",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
+  "postCreateCommand": "npm ci && sudo npx playwright install-deps chromium && npx playwright install chromium",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
+}

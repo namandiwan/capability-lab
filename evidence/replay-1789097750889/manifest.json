@@ -1,0 +1,31 @@
+{
+  "discoveryRunId": "556186ea-0145-45bf-8765-8673182db9cb",
+  "discoveredArtifact": "evidence/discovery-1789097619829/capability.json",
+  "discoveryProvider": "ollama/qwen3:4b",
+  "replayRoot": "evidence/replay-1789097750889",
+  "results": [
+    {
+      "name": "success-new-input",
+      "result": {
+        "runId": "3496b88c-260e-4381-8383-f6206befdbd1",
+        "status": "success",
+        "outputs": {
+          "balance": "$8,240.75",
+          "reviewStatus": "Ready for approval",
+          "reviewProduct": "Savings"
+        },
+        "modelCalls": 0
+      }
+    },
+    {
+      "name": "not-found",
+      "result": {
+        "runId": "f2526fd8-d0f3-4407-88d6-6c6bcb9b32b0",
+        "status": "business_outcome",
+        "code": "not_found",
+        "step": 1,
+        "modelCalls": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{"time":"2026-09-11T03:35:55.503Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":1,"event":"run_started","code":"replay"}
+{"time":"2026-09-11T03:35:55.733Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":2,"event":"action","step":0,"target":"memberId","kind":"fill","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:55.832Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":3,"event":"checkpoint","step":0,"state":"search"}
+{"time":"2026-09-11T03:35:55.883Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":4,"event":"action","step":1,"target":"search","kind":"click","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.087Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":5,"event":"checkpoint","step":1,"state":"results"}
+{"time":"2026-09-11T03:35:56.131Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":6,"event":"action","step":2,"target":"openMember","kind":"click","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.200Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":7,"event":"checkpoint","step":2,"state":"detail"}
+{"time":"2026-09-11T03:35:56.243Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":8,"event":"action","step":3,"target":"prepareAccount","kind":"click","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.318Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":9,"event":"checkpoint","step":3,"state":"form"}
+{"time":"2026-09-11T03:35:56.364Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":10,"event":"action","step":4,"target":"product","kind":"select","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.440Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":11,"event":"checkpoint","step":4,"state":"form"}
+{"time":"2026-09-11T03:35:56.488Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":12,"event":"action","step":5,"target":"nickname","kind":"fill","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.557Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":13,"event":"checkpoint","step":5,"state":"form"}
+{"time":"2026-09-11T03:35:56.603Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":14,"event":"action","step":6,"target":"review","kind":"click","reason":"recorded_step"}
+{"time":"2026-09-11T03:35:56.669Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":15,"event":"checkpoint","step":6,"state":"review"}
+{"time":"2026-09-11T03:35:56.725Z","runId":"3496b88c-260e-4381-8383-f6206befdbd1","sequence":16,"event":"run_completed","code":"success","modelCalls":0,"elapsedMs":1224}

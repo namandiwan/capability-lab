@@ -1,0 +1,12 @@
+{
+  "runId": "5b0a769c-7a89-4a05-9b20-943a8793baad",
+  "step": 2,
+  "state": "session_expired",
+  "accessibleControls": [
+    {
+      "target": "signIn",
+      "visible": true
+    }
+  ],
+  "redaction": "Allowlisted semantic projection; no page text, field values, URLs or pixels stored."
+}

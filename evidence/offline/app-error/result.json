@@ -1,0 +1,9 @@
+{
+  "runId": "1e15a454-17b2-4815-a9ad-175861077e4d",
+  "status": "failure",
+  "code": "operator_required",
+  "step": 1,
+  "expected": "results",
+  "observed": "app_error",
+  "modelCalls": 0
+}

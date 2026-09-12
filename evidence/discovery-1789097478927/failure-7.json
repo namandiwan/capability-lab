@@ -1,0 +1,24 @@
+{
+  "runId": "b96d0a0b-7db5-46f5-8624-2420ce748e93",
+  "step": 7,
+  "state": "review",
+  "accessibleControls": [
+    {
+      "target": "balance",
+      "visible": true
+    },
+    {
+      "target": "reviewStatus",
+      "visible": true
+    },
+    {
+      "target": "reviewProduct",
+      "visible": true
+    },
+    {
+      "target": "commit",
+      "visible": true
+    }
+  ],
+  "redaction": "Allowlisted semantic projection; no page text, field values, URLs or pixels stored."
+}
