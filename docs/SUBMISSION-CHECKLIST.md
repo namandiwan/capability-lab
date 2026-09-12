@@ -1,6 +1,6 @@
 # Submission readiness review
 
-Review basis: the complete assignment, current source, evidence and the exact reviewer command. The latest run passed 19/19 tests and 5/5 repeat replays. A genuine local Qwen3 discovery and two model-free replays are captured.
+Review basis: the complete assignment, current source, evidence and the exact reviewer command. The latest run passed 20/20 tests and 5/5 repeat replays. A genuine local Qwen3 discovery, its two core verification replays, and a registry-backed named invocation are captured with zero replay model calls.
 
 ## Requirement coverage
 
