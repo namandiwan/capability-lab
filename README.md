@@ -151,7 +151,7 @@ The registry resolves the reviewed artifact, validates arguments and dispatches 
 
 ## Evidence and limitations
 
-See `evidence/README.md` for evidence provenance and `docs/SUBMISSION-CHECKLIST.md` for remaining work. See `REPORT.md` for the seven required design sections.
+See `evidence/README.md` for evidence provenance and `REPORT.md` for the seven required design sections.
 
 Existing tests cover parameterized replay, business outcomes, notice/slow-load recovery, same-session handoff, bad resume, failure snapshots, forbidden artifacts, ambiguity, schemas, privacy, provider schemas, the local-model adapter and test-double discovery. Genuine local-model evidence establishes one successful run, not production reliability or support for arbitrary desktop/legacy applications.
 
